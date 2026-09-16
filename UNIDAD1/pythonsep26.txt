@@ -1,0 +1,65 @@
+
+
+
+
+1. SoloLetras — solo letras y espacios
+	
+	def SoloLetras(self, a):
+    c = 0
+    for i in a:
+        if (ord(i) >= 97 and ord(i) <= 122) or (ord(i) >= 65 and ord(i) <= 90) or ord(i) == 32:
+            c += 1
+    if c == len(a) and len(a) > 0:
+        return True
+    else:
+        return False
+
+
+2. MayusculasIniciales — cada palabra empieza con mayúscula
+def MayusculasIniciales(self, a):
+    partes = a.split()
+    c = 0
+    for palabra in partes:
+        if ord(palabra[0]) >= 65 and ord(palabra[0]) <= 90:
+            c += 1
+    if c == len(partes) and len(partes) > 0:
+        return True
+    else:
+        return False
+		
+		
+3. NPalabras — verifica cantidad de palabras
+def NPalabras(self, a, n):
+    partes = a.split()
+    if len(partes) == n:
+        return True
+    else:
+        return False
+		
+4. EsDecimal — es un número decimal
+def EsDecimal(self, a):
+    try:
+        v = float(a)
+        return True
+    except ValueError:
+        return False
+		
+5. EsEntero — es un número entero
+		def EsEntero(self, a):
+    try:
+        v = int(a)
+        return True
+    except ValueError:
+        return False
+		
+6. EnRango — número entre mínimo y máximo
+
+def EnRango(self, a, minimo, maximo):
+    try:
+        v = float(a)
+        if v >= minimo and v <= maximo:
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
